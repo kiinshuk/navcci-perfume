@@ -25,7 +25,7 @@ from apps.orders.serializers import (
 )
 from apps.payments.services import create_razorpay_order
 
-logger = logging.getLogger("luxe.orders")
+logger = logging.getLogger("navcci.orders")
 
 
 def _cart_from_request(request):

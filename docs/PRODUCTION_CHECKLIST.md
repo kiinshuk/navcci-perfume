@@ -5,7 +5,7 @@
 - [ ] `SECRET_KEY` and `REVALIDATE_SECRET` regenerated and stored in vault
 - [ ] `DEBUG=False`, `ENVIRONMENT=production`
 - [ ] `ALLOWED_HOSTS` set to production domains
-- [ ] `CORS_ALLOWED_ORIGINS` set to `https://luxeperfume.in,https://www.luxeperfume.in`
+- [ ] `CORS_ALLOWED_ORIGINS` set to `https://navcciperfume.in,https://www.navcciperfume.in`
 - [ ] Database password rotated and stored in vault
 - [ ] S3 / R2 credentials scoped to a single bucket
 - [ ] Razorpay live keys configured

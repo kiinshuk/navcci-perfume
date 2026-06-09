@@ -30,8 +30,8 @@ sudo apt -y install docker-compose-plugin
 ## 3. Clone & configure
 
 ```bash
-git clone https://github.com/your-org/luxe-perfume.git /opt/luxe
-cd /opt/luxe
+git clone https://github.com/your-org/navcci-perfume.git /opt/navcci
+cd /opt/navcci
 cp .env.example .env
 $EDITOR .env   # fill real values
 ```
@@ -43,7 +43,7 @@ an origin certificate. Otherwise:
 
 ```bash
 sudo apt -y install certbot
-sudo certbot certonly --standalone -d luxeperfume.in -d www.luxeperfume.in -d api.luxeperfume.in
+sudo certbot certonly --standalone -d navcciperfume.in -d www.navcciperfume.in -d api.navcciperfume.in
 ```
 
 Drop the issued certificates into `infra/nginx/certs/`:
@@ -78,20 +78,20 @@ docker compose exec backend python manage.py collectstatic --noinput
 ## 6. Verify
 
 ```bash
-curl -fsS https://api.luxeperfume.in/api/health/
-curl -fsS https://luxeperfume.in
+curl -fsS https://api.navcciperfume.in/api/health/
+curl -fsS https://navcciperfume.in
 ```
 
 ## 7. Backups
 
 Postgres:
 ```bash
-docker compose exec -T db pg_dump -U $POSTGRES_USER $POSTGRES_DB | gzip > /backups/luxe-$(date +%F).sql.gz
+docker compose exec -T db pg_dump -U $POSTGRES_USER $POSTGRES_DB | gzip > /backups/navcci-$(date +%F).sql.gz
 ```
 
 Add to `crontab -e`:
 ```
-0 3 * * * /opt/luxe/scripts/backup.sh
+0 3 * * * /opt/navcci/scripts/backup.sh
 ```
 
 ## 8. Observability
@@ -102,7 +102,7 @@ Add to `crontab -e`:
 ## 9. Updates
 
 ```bash
-cd /opt/luxe
+cd /opt/navcci
 git pull
 docker compose pull
 docker compose up -d --build
@@ -122,6 +122,6 @@ docker compose exec backend python manage.py migrate
 
 In the Razorpay dashboard, add a webhook:
 
-- URL: `https://api.luxeperfume.in/api/payments/webhook/razorpay/`
+- URL: `https://api.navcciperfume.in/api/payments/webhook/razorpay/`
 - Events: `payment.captured`, `order.paid`, `refund.processed`
 - Secret: same as `RAZORPAY_WEBHOOK_SECRET` in `.env`

@@ -14,14 +14,14 @@ const GALLERY = [
 
 export function InstagramGallery() {
   return (
-    <section className="luxe-container py-20">
+    <section className="navcci-container py-20">
       <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
         <div>
-          <p className="luxe-eyebrow text-gold-600">@luxeperfume</p>
-          <h2 className="mt-2 luxe-heading text-3xl md:text-4xl">The Atelier in the Wild</h2>
+          <p className="navcci-eyebrow text-gold-600">@luxeperfume</p>
+          <h2 className="mt-2 navcci-heading text-3xl md:text-4xl">The Atelier in the Wild</h2>
         </div>
         <Button asChild variant="outline" size="sm">
-          <Link href="https://instagram.com/luxeperfume" target="_blank">
+          <Link href="https://instagram.com/navcciperfume" target="_blank">
             Follow on Instagram
           </Link>
         </Button>
@@ -30,7 +30,7 @@ export function InstagramGallery() {
         {GALLERY.map((src, idx) => (
           <Link
             key={src}
-            href="https://instagram.com/luxeperfume"
+            href="https://instagram.com/navcciperfume"
             target="_blank"
             className="group relative aspect-square overflow-hidden"
           >

@@ -10,7 +10,7 @@ const Label = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <LabelPrimitive.Root
     ref={ref}
-    className={cn("luxe-eyebrow block", className)}
+    className={cn("navcci-eyebrow block", className)}
     {...props}
   />
 ));

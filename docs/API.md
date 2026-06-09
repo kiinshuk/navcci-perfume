@@ -1,8 +1,8 @@
 # API Reference
 
-Base URL (production): `https://api.luxeperfume.in/api`
-OpenAPI/Swagger: `https://api.luxeperfume.in/api/docs/`
-ReDoc: `https://api.luxeperfume.in/api/redoc/`
+Base URL (production): `https://api.navcciperfume.in/api`
+OpenAPI/Swagger: `https://api.navcciperfume.in/api/docs/`
+ReDoc: `https://api.navcciperfume.in/api/redoc/`
 
 All responses follow the envelope:
 

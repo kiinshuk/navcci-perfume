@@ -159,7 +159,7 @@ class Product(TimestampedModel, SoftDeleteModel):
         if not self.sku:
             self.sku = generate_sku("LXP")
         if not self.meta_title:
-            self.meta_title = f"{self.name} — {self.brand.name} | Luxe Perfume"
+            self.meta_title = f"{self.name} — {self.brand.name} | Navcci Perfume"
         super().save(*args, **kwargs)
 
     @property

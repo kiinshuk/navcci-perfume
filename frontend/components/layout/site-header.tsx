@@ -37,7 +37,7 @@ export function SiteHeader() {
       )}
     >
       <AnnouncementBar />
-      <div className="luxe-container flex h-20 items-center justify-between gap-4">
+      <div className="navcci-container flex h-20 items-center justify-between gap-4">
         <button
           className="lg:hidden"
           onClick={() => setMobileOpen(!mobileOpen)}
@@ -55,7 +55,7 @@ export function SiteHeader() {
 
         <nav className="hidden items-center gap-8 lg:flex" aria-label="Main">
           {NAV.map((item) => (
-            <Link key={item.href} href={item.href} className="luxe-link">
+            <Link key={item.href} href={item.href} className="navcci-link">
               {item.label}
             </Link>
           ))}
@@ -100,7 +100,7 @@ export function SiteHeader() {
 
       {mobileOpen && (
         <div className="border-t border-border bg-background lg:hidden">
-          <nav className="luxe-container flex flex-col py-4" aria-label="Mobile">
+          <nav className="navcci-container flex flex-col py-4" aria-label="Mobile">
             {NAV.map((item) => (
               <Link
                 key={item.href}

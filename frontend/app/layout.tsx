@@ -38,15 +38,15 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://luxeperfume.in"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://navcciperfume.in"),
   title: {
-    default: "Luxe Perfume — The Art of Fine Fragrance",
-    template: "%s | Luxe Perfume",
+    default: "Navcci Perfume — The Art of Fine Fragrance",
+    template: "%s | Navcci Perfume",
   },
   description:
     "Discover hand-crafted niche perfumes from the world's most prestigious houses. Complimentary shipping across India on orders above ₹1,500.",
-  applicationName: "Luxe Perfume",
-  authors: [{ name: "Luxe Perfume" }],
+  applicationName: "Navcci Perfume",
+  authors: [{ name: "Navcci Perfume" }],
   keywords: [
     "luxury perfume",
     "niche fragrance",
@@ -57,8 +57,8 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     type: "website",
-    siteName: "Luxe Perfume",
-    title: "Luxe Perfume — The Art of Fine Fragrance",
+    siteName: "Navcci Perfume",
+    title: "Navcci Perfume — The Art of Fine Fragrance",
     description:
       "Discover hand-crafted niche perfumes from the world's most prestigious houses.",
     url: "/",
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Luxe Perfume — The Art of Fine Fragrance",
+    title: "Navcci Perfume — The Art of Fine Fragrance",
     description: "Discover hand-crafted niche perfumes from the world's most prestigious houses.",
   },
   robots: {

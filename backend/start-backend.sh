@@ -1,9 +1,9 @@
 #!/bin/bash
 # Fully detach from the launching shell by using setsid + double fork.
 # This makes the server survive even when the parent bash exits.
-cd /home/kinshuk/luxe-perfume/backend
+cd /home/kinshuk/navcci-perfume/backend
 export DJANGO_SETTINGS_MODULE=config.settings_local
-LOG=/home/kinshuk/luxe-perfume/backend/logs/django.log
+LOG=/home/kinshuk/navcci-perfume/backend/logs/django.log
 
 # Truncate log
 : > "$LOG"

@@ -40,7 +40,7 @@ export default function RegisterPage() {
     setSubmitting(true);
     try {
       await register(data);
-      toast.success("Welcome to Luxe Perfume.");
+      toast.success("Welcome to Navcci Perfume.");
       router.push("/account/profile");
     } catch (err: any) {
       toast.error(err?.response?.data?.error?.message || "Could not create account.");
@@ -50,9 +50,9 @@ export default function RegisterPage() {
   };
 
   return (
-    <div className="luxe-container max-w-xl py-20">
-      <p className="luxe-eyebrow text-gold-600">Atelier Access</p>
-      <h1 className="mt-2 luxe-heading text-4xl">Create your account</h1>
+    <div className="navcci-container max-w-xl py-20">
+      <p className="navcci-eyebrow text-gold-600">Atelier Access</p>
+      <h1 className="mt-2 navcci-heading text-4xl">Create your account</h1>
       <p className="mt-2 text-sm text-muted-foreground">
         Unlock member benefits: early access, exclusive launches and a complimentary 5ml sample with every order.
       </p>

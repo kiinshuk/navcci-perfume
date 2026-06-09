@@ -25,7 +25,7 @@ All variables live in `.env` (see `.env.example`).
 
 | Var | Required | Description |
 |---|---|---|
-| `NEXT_PUBLIC_API_URL` | yes | e.g. `https://api.luxeperfume.in/api` |
+| `NEXT_PUBLIC_API_URL` | yes | e.g. `https://api.navcciperfume.in/api` |
 | `NEXT_PUBLIC_RAZORPAY_KEY_ID` | yes | Razorpay key |
 | `NEXT_PUBLIC_SITE_URL` | yes | Canonical site URL |
 | `NEXT_PUBLIC_SITE_NAME` | no | Display name |

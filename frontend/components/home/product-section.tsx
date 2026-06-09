@@ -17,14 +17,14 @@ export function ProductSection({
 }) {
   if (!products.length) return null;
   return (
-    <section className="luxe-container py-20">
+    <section className="navcci-container py-20">
       <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
         <div>
-          <p className="luxe-eyebrow text-gold-600">{eyebrow}</p>
-          <h2 className="mt-2 luxe-heading text-3xl md:text-4xl">{title}</h2>
+          <p className="navcci-eyebrow text-gold-600">{eyebrow}</p>
+          <h2 className="mt-2 navcci-heading text-3xl md:text-4xl">{title}</h2>
         </div>
         {link && (
-          <Link href={link.href} className="luxe-link flex items-center gap-2">
+          <Link href={link.href} className="navcci-link flex items-center gap-2">
             {link.label} <ArrowRight className="h-3.5 w-3.5" />
           </Link>
         )}

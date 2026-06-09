@@ -41,7 +41,7 @@ export const authApi = {
       .then((r) => r.data),
   logout: () =>
     api
-      .post("/auth/logout/", { refresh: typeof window !== "undefined" ? window.localStorage.getItem("luxe.refresh") : null })
+      .post("/auth/logout/", { refresh: typeof window !== "undefined" ? window.localStorage.getItem("navcci.refresh") : null })
       .finally(() => clearTokens()),
   me: () => api.get<User>("/auth/profile/").then((r) => r.data),
   changePassword: (current: string, next: string) =>

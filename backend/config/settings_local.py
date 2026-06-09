@@ -19,7 +19,7 @@ DATABASES = {
 CACHES = {
     "default": {
         "BACKEND": "django.core.cache.backends.locmem.LocMemCache",
-        "LOCATION": "luxe-local",
+        "LOCATION": "navcci-local",
     }
 }
 

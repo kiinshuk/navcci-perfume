@@ -17,7 +17,7 @@ from rest_framework.views import APIView
 from apps.orders.models import Order
 from apps.payments.services import capture_payment, refund_payment
 
-logger = logging.getLogger("luxe.payments")
+logger = logging.getLogger("navcci.payments")
 
 
 class RazorpayCaptureView(APIView):

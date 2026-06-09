@@ -101,7 +101,7 @@ export default function OrderDetailPage() {
               <p className="text-xs uppercase tracking-widest text-muted-foreground">Tracking</p>
               <p className="mt-1 font-medium">{data.trackingNumber}</p>
               {data.trackingUrl && (
-                <a href={data.trackingUrl} target="_blank" rel="noreferrer" className="luxe-link mt-1 inline-flex">
+                <a href={data.trackingUrl} target="_blank" rel="noreferrer" className="navcci-link mt-1 inline-flex">
                   Track shipment →
                 </a>
               )}

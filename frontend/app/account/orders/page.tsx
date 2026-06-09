@@ -30,7 +30,7 @@ export default function OrdersPage() {
       <div>
         <h1 className="font-serif text-3xl">Orders</h1>
         <p className="mt-6 text-muted-foreground">You haven't placed any orders yet.</p>
-        <Link href="/shop" className="luxe-link mt-3 inline-flex">Browse the collection →</Link>
+        <Link href="/shop" className="navcci-link mt-3 inline-flex">Browse the collection →</Link>
       </div>
     );
   }

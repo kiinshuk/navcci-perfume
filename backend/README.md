@@ -1,6 +1,6 @@
-# Luxe Perfume — Backend
+# Navcci Perfume — Backend
 
-Django 5 + DRF API for the Luxe Perfume platform.
+Django 5 + DRF API for the Navcci Perfume platform.
 
 ## Quick reference
 
@@ -20,8 +20,8 @@ python manage.py runserver
 
 ## Sample credentials (created by `seed`)
 
-- Admin: `admin@luxeperfume.in` / `LuxeAdmin#2025`
-- Customer: `demo@luxeperfume.in` / `LuxeDemo#2025`
+- Admin: `admin@navcciperfume.in` / `LuxeAdmin#2025`
+- Customer: `demo@navcciperfume.in` / `LuxeDemo#2025`
 
 ## Apps
 

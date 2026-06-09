@@ -11,19 +11,19 @@ const PILLARS = [
 export function BrandStory() {
   return (
     <section className="bg-ink-50 dark:bg-ink-900">
-      <div className="luxe-container grid gap-12 py-24 md:grid-cols-2 md:items-center">
+      <div className="navcci-container grid gap-12 py-24 md:grid-cols-2 md:items-center">
         <div>
-          <p className="luxe-eyebrow text-gold-600">Our Story</p>
-          <h2 className="mt-3 luxe-heading text-4xl md:text-5xl">
+          <p className="navcci-eyebrow text-gold-600">Our Story</p>
+          <h2 className="mt-3 navcci-heading text-4xl md:text-5xl">
             Crafted slowly. <br />
             Bottled with intention.
           </h2>
           <p className="mt-6 max-w-lg text-base leading-relaxed text-muted-foreground">
-            Luxe Perfume began in a small Mumbai atelier with a single conviction — fine
+            Navcci Perfume began in a small Mumbai atelier with a single conviction — fine
             fragrance is one of the most intimate forms of art. Today we partner with
             independent perfumers and storied houses to bring you bottles with soul.
           </p>
-          <Link href="/about" className="luxe-link mt-6 inline-flex">
+          <Link href="/about" className="navcci-link mt-6 inline-flex">
             Read our story →
           </Link>
         </div>

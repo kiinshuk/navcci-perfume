@@ -75,7 +75,7 @@ export function ProductCard({ product, priority = false }: { product: Product; p
           />
         ) : (
           <div className="flex h-full w-full items-center justify-center text-muted-foreground">
-            <span className="luxe-eyebrow">Luxe Perfume</span>
+            <span className="navcci-eyebrow">Navcci Perfume</span>
           </div>
         )}
 
@@ -113,7 +113,7 @@ export function ProductCard({ product, priority = false }: { product: Product; p
       </div>
 
       <div className="px-1 pt-4">
-        <p className="luxe-eyebrow">{product.brand?.name}</p>
+        <p className="navcci-eyebrow">{product.brand?.name}</p>
         <h3 className="mt-1 font-serif text-lg leading-tight">{product.name}</h3>
         <p className="mt-1 line-clamp-1 text-xs text-muted-foreground">{product.shortDescription}</p>
         <div className="mt-2 flex items-baseline gap-2">

@@ -1,4 +1,4 @@
-# Luxe Perfume — Luxury E-commerce Platform
+# Navcci Perfume — Luxury E-commerce Platform
 
 Production-grade monorepo for a luxury perfume brand.
 
@@ -12,7 +12,7 @@ Production-grade monorepo for a luxury perfume brand.
 ## Repository Layout
 
 ```
-luxe-perfume/
+navcci-perfume/
 ├── backend/                # Django REST API
 │   ├── config/             # Settings, URLs, ASGI/WSGI
 │   ├── apps/
@@ -44,7 +44,7 @@ luxe-perfume/
 
 ```bash
 git clone <repo>
-cd luxe-perfume
+cd navcci-perfume
 cp .env.example .env
 docker compose up -d --build
 docker compose exec backend python manage.py migrate
@@ -66,4 +66,4 @@ docker compose exec backend python manage.py seed
 
 ## License
 
-Proprietary — © Luxe Perfume.
+Proprietary — © Navcci Perfume.

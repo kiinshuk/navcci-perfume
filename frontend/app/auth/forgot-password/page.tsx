@@ -34,9 +34,9 @@ export default function ForgotPasswordPage() {
   };
 
   return (
-    <div className="luxe-container max-w-md py-20">
-      <p className="luxe-eyebrow text-gold-600">Account Recovery</p>
-      <h1 className="mt-2 luxe-heading text-4xl">Reset your password</h1>
+    <div className="navcci-container max-w-md py-20">
+      <p className="navcci-eyebrow text-gold-600">Account Recovery</p>
+      <h1 className="mt-2 navcci-heading text-4xl">Reset your password</h1>
       {submitted ? (
         <p className="mt-6 text-sm text-muted-foreground">
           We sent a 6-digit code to your email. <Link href="/auth/reset-password" className="underline">Enter it here</Link>.

@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { productsApi } from "@/lib/services";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const base = process.env.NEXT_PUBLIC_SITE_URL || "https://luxeperfume.in";
+  const base = process.env.NEXT_PUBLIC_SITE_URL || "https://navcciperfume.in";
   const data = await productsApi.list().catch(() => ({ results: [] } as any));
   const staticRoutes = ["", "/shop", "/about", "/contact", "/privacy", "/terms", "/shipping", "/returns"];
 

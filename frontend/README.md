@@ -1,4 +1,4 @@
-# Luxe Perfume — Frontend
+# Navcci Perfume — Frontend
 
 Next.js 15 storefront + admin dashboard.
 

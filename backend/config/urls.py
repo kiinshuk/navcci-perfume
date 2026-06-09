@@ -1,4 +1,4 @@
-"""URL configuration for the Luxe Perfume API."""
+"""URL configuration for the Navcci Perfume API."""
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
@@ -12,7 +12,7 @@ from drf_spectacular.views import (
 
 
 def health(_request):
-    return JsonResponse({"status": "ok", "service": "luxe-perfume-api"})
+    return JsonResponse({"status": "ok", "service": "navcci-perfume-api"})
 
 
 urlpatterns = [

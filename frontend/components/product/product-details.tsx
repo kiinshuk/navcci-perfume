@@ -77,7 +77,7 @@ export function ProductDetails({ product, reviews }: { product: Product; reviews
 function NoteColumn({ label, notes, description }: { label: string; notes: string[]; description: string }) {
   return (
     <div>
-      <p className="luxe-eyebrow text-gold-600">{label}</p>
+      <p className="navcci-eyebrow text-gold-600">{label}</p>
       <p className="mt-2 font-serif text-2xl">{notes.join(" · ") || "—"}</p>
       <p className="mt-2 text-sm text-muted-foreground">{description}</p>
     </div>

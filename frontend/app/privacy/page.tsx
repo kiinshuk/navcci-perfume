@@ -8,7 +8,7 @@ export default function PrivacyPage() {
       <h1>Privacy Policy</h1>
       <p>Last updated: 1 January 2026.</p>
       <p>
-        Luxe Perfume ("we", "us") respects your privacy. This policy explains what data
+        Navcci Perfume ("we", "us") respects your privacy. This policy explains what data
         we collect, why, and how we keep it safe.
       </p>
       <h2>Data we collect</h2>
@@ -22,9 +22,9 @@ export default function PrivacyPage() {
       <h2>Payments</h2>
       <p>All card data is handled directly by Razorpay. We never store your full card number or CVV.</p>
       <h2>Your rights</h2>
-      <p>You can request access, correction or deletion of your personal data by emailing hello@luxeperfume.in.</p>
+      <p>You can request access, correction or deletion of your personal data by emailing hello@navcciperfume.in.</p>
       <h2>Contact</h2>
-      <p>For privacy queries, contact our Data Protection Officer at hello@luxeperfume.in.</p>
+      <p>For privacy queries, contact our Data Protection Officer at hello@navcciperfume.in.</p>
     </Policy>
   );
 }

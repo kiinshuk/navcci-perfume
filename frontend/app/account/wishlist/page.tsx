@@ -27,7 +27,7 @@ export default function WishlistPage() {
         <div className="mt-12 text-center">
           <Heart className="mx-auto h-10 w-10 text-muted-foreground" />
           <p className="mt-4 text-muted-foreground">Your wishlist is empty.</p>
-          <Link href="/shop" className="luxe-link mt-3 inline-flex">Browse the collection →</Link>
+          <Link href="/shop" className="navcci-link mt-3 inline-flex">Browse the collection →</Link>
         </div>
       </div>
     );

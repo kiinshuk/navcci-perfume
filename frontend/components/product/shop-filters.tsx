@@ -49,7 +49,7 @@ export function ShopFilters() {
   return (
     <div className="space-y-8">
       <div>
-        <h3 className="luxe-eyebrow">Price (₹)</h3>
+        <h3 className="navcci-eyebrow">Price (₹)</h3>
         <div className="mt-3 grid grid-cols-2 gap-2">
           <Input
             type="number"
@@ -67,7 +67,7 @@ export function ShopFilters() {
       </div>
 
       <div>
-        <h3 className="luxe-eyebrow">Gender</h3>
+        <h3 className="navcci-eyebrow">Gender</h3>
         <ul className="mt-3 space-y-2 text-sm">
           {GENDERS.map((g) => (
             <li key={g.value} className="flex items-center gap-2">
@@ -85,7 +85,7 @@ export function ShopFilters() {
       </div>
 
       <div>
-        <h3 className="luxe-eyebrow">Fragrance Family</h3>
+        <h3 className="navcci-eyebrow">Fragrance Family</h3>
         <ul className="mt-3 grid grid-cols-2 gap-2 text-sm">
           {FAMILIES.map((f) => (
             <li key={f} className="flex items-center gap-2">
@@ -103,7 +103,7 @@ export function ShopFilters() {
       </div>
 
       <div>
-        <h3 className="luxe-eyebrow">Minimum Rating</h3>
+        <h3 className="navcci-eyebrow">Minimum Rating</h3>
         <div className="mt-3 flex flex-wrap gap-2">
           {[4, 4.5].map((r) => (
             <button

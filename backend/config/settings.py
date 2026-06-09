@@ -1,5 +1,5 @@
 """
-Django settings for the Luxe Perfume platform.
+Django settings for the Navcci Perfume platform.
 Production-hardened with environment-driven configuration.
 """
 from __future__ import annotations
@@ -87,8 +87,8 @@ TEMPLATES = [
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": config("POSTGRES_DB", default="luxe"),
-        "USER": config("POSTGRES_USER", default="luxe"),
+        "NAME": config("POSTGRES_DB", default="navcci"),
+        "USER": config("POSTGRES_USER", default="navcci"),
         "PASSWORD": config("POSTGRES_PASSWORD", default=""),
         "HOST": config("POSTGRES_HOST", default="db"),
         "PORT": config("POSTGRES_PORT", default="5432"),
@@ -117,7 +117,7 @@ CACHES = {
             "SOCKET_CONNECT_TIMEOUT": 3,
             "SOCKET_TIMEOUT": 3,
         },
-        "KEY_PREFIX": "luxe",
+        "KEY_PREFIX": "navcci",
         "TIMEOUT": 60 * 15,
     }
 }
@@ -220,7 +220,7 @@ REST_FRAMEWORK = {
         "checkout": "10/minute",
         "auth": "10/minute",
     },
-    "EXCEPTION_HANDLER": "apps.core.exceptions.luxe_exception_handler",
+    "EXCEPTION_HANDLER": "apps.core.exceptions.navcci_exception_handler",
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
     "TEST_REQUEST_DEFAULT_FORMAT": "json",
 }
@@ -243,11 +243,11 @@ SIMPLE_JWT = {
 }
 
 SPECTACULAR_SETTINGS = {
-    "TITLE": "Luxe Perfume API",
-    "DESCRIPTION": "Production REST API for the Luxe Perfume platform.",
+    "TITLE": "Navcci Perfume API",
+    "DESCRIPTION": "Production REST API for the Navcci Perfume platform.",
     "VERSION": "1.0.0",
     "SERVE_INCLUDE_SCHEMA": False,
-    "CONTACT": {"name": "Luxe Engineering", "email": "eng@luxeperfume.in"},
+    "CONTACT": {"name": "Navcci Engineering", "email": "eng@navcciperfume.in"},
     "LICENSE": {"name": "Proprietary"},
     "SWAGGER_UI_DIST": "SIDECAR",
     "SWAGGER_UI_FAVICON_HREF": "SIDECAR",
@@ -313,9 +313,9 @@ EMAIL_PORT = config("EMAIL_PORT", default=587, cast=int)
 EMAIL_HOST_USER = config("EMAIL_HOST_USER", default="")
 EMAIL_HOST_PASSWORD = config("EMAIL_HOST_PASSWORD", default="")
 EMAIL_USE_TLS = config("EMAIL_USE_TLS", default=True, cast=bool)
-DEFAULT_FROM_EMAIL = config("DEFAULT_FROM_EMAIL", default="noreply@luxeperfume.in")
+DEFAULT_FROM_EMAIL = config("DEFAULT_FROM_EMAIL", default="noreply@navcciperfume.in")
 SERVER_EMAIL = DEFAULT_FROM_EMAIL
-ADMINS = [("Luxe Admin", config("ADMIN_EMAIL", default="admin@luxeperfume.in"))]
+ADMINS = [("Navcci Admin", config("ADMIN_EMAIL", default="admin@navcciperfume.in"))]
 
 # ---------------------------------------------------------------------------
 # Payments
@@ -358,7 +358,7 @@ LOGGING = {
     "loggers": {
         "django.db.backends": {"level": "WARNING"},
         "django.request": {"handlers": ["console"], "level": "WARNING", "propagate": False},
-        "luxe": {"handlers": ["console"], "level": "INFO", "propagate": False},
+        "navcci": {"handlers": ["console"], "level": "INFO", "propagate": False},
     },
 }
 

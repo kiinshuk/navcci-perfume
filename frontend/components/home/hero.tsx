@@ -6,10 +6,10 @@ import { Button } from "@/components/ui/button";
 export function Hero() {
   return (
     <section className="relative overflow-hidden bg-ink-50 dark:bg-ink-900">
-      <div className="luxe-container grid items-center gap-12 py-20 md:grid-cols-2 md:py-32">
+      <div className="navcci-container grid items-center gap-12 py-20 md:grid-cols-2 md:py-32">
         <div className="space-y-7">
-          <p className="luxe-eyebrow text-gold-600">Autumn / Winter 2025</p>
-          <h1 className="luxe-heading text-5xl md:text-6xl lg:text-7xl">
+          <p className="navcci-eyebrow text-gold-600">Autumn / Winter 2025</p>
+          <h1 className="navcci-heading text-5xl md:text-6xl lg:text-7xl">
             The Art of <span className="italic text-gold-500">Fine</span> Fragrance
           </h1>
           <p className="max-w-md text-base leading-relaxed text-muted-foreground">
@@ -37,10 +37,10 @@ export function Hero() {
           />
           <div className="absolute inset-x-6 bottom-6 flex items-center justify-between bg-background/85 px-5 py-4 backdrop-blur">
             <div>
-              <p className="luxe-eyebrow">Bestseller</p>
+              <p className="navcci-eyebrow">Bestseller</p>
               <p className="font-serif text-lg">Noir Velours</p>
             </div>
-            <Link href="/product/noir-velours" className="luxe-link">Shop →</Link>
+            <Link href="/product/noir-velours" className="navcci-link">Shop →</Link>
           </div>
         </div>
       </div>

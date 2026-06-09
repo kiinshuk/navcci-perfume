@@ -83,7 +83,7 @@ export function CheckoutForm({ initialCart }: { initialCart: Cart }) {
   //     key: razorpay.key_id,
   //     amount: razorpay.amount,
   //     currency: razorpay.currency,
-  //     name: "Luxe Perfume",
+  //     name: "Navcci Perfume",
   //     description: `Order ${orderNumber}`,
   //     order_id: razorpay.id,
   //     prefill: { name: user?.fullName, email: user?.email, contact: user?.phone },

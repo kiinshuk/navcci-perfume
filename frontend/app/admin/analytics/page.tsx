@@ -36,7 +36,7 @@ export default function AnalyticsPage() {
 function Tile({ label, value }: { label: string; value: number | string }) {
   return (
     <div className="border border-border p-5">
-      <p className="luxe-eyebrow">{label}</p>
+      <p className="navcci-eyebrow">{label}</p>
       <p className="mt-2 font-serif text-3xl">{value}</p>
     </div>
   );

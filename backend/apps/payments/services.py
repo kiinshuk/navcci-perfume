@@ -12,7 +12,7 @@ from django.conf import settings
 from apps.orders.models import Order
 from apps.orders.services import mark_order_status
 
-logger = logging.getLogger("luxe.payments")
+logger = logging.getLogger("navcci.payments")
 
 
 _PLACEHOLDER_KEYS = {"", "rzp_test_placeholder", "rzp_live_placeholder", "local_secret"}

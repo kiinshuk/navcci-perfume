@@ -9,7 +9,7 @@ import { Pagination } from "@/components/product/pagination";
 
 export const metadata: Metadata = {
   title: "Shop the Collection",
-  description: "Discover the complete Luxe Perfume collection — hand-crafted niche fragrances.",
+  description: "Discover the complete Navcci Perfume collection — hand-crafted niche fragrances.",
   alternates: { canonical: "/shop" },
 };
 
@@ -51,10 +51,10 @@ export default async function ShopPage({ searchParams }: PageProps) {
   const data = await productsApi.list(params).catch(() => ({ results: [], count: 0, totalPages: 1, page: 1 } as any));
 
   return (
-    <div className="luxe-container py-12">
+    <div className="navcci-container py-12">
       <header className="border-b border-border pb-8">
-        <p className="luxe-eyebrow text-gold-600">The Collection</p>
-        <h1 className="mt-2 luxe-heading text-4xl md:text-5xl">Shop All Fragrances</h1>
+        <p className="navcci-eyebrow text-gold-600">The Collection</p>
+        <h1 className="mt-2 navcci-heading text-4xl md:text-5xl">Shop All Fragrances</h1>
         <p className="mt-3 max-w-2xl text-muted-foreground">
           Explore our hand-curated world of niche perfumery. Filter by family, mood or house
           to find your next signature.

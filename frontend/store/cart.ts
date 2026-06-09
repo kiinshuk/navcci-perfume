@@ -120,7 +120,7 @@ export const useCartStore = create<CartState>()(
       getItem: (productId) => get().cart?.items.find((i) => i.product === productId),
     }),
     {
-      name: "luxe.cart",
+      name: "navcci.cart",
       partialize: (state) => ({ cart: state.cart }),
     }
   )

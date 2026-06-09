@@ -22,9 +22,9 @@ const TESTIMONIALS = [
 export function Testimonials() {
   return (
     <section className="bg-ink-900 py-24 text-background">
-      <div className="luxe-container">
+      <div className="navcci-container">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="luxe-eyebrow text-gold-500">Words From Our Patrons</p>
+          <p className="navcci-eyebrow text-gold-500">Words From Our Patrons</p>
           <h2 className="mt-3 font-serif text-4xl md:text-5xl">A quiet obsession.</h2>
         </div>
         <div className="mt-12 grid gap-8 md:grid-cols-3">

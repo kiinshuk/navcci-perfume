@@ -67,7 +67,7 @@ export function CartDrawer() {
 
         {!user && (
           <div className="border-b border-border bg-muted/50 px-6 py-3 text-xs">
-            <Link href="/auth/login" className="luxe-link" onClick={close}>
+            <Link href="/auth/login" className="navcci-link" onClick={close}>
               Sign in
             </Link>{" "}
             to sync your cart & unlock member rewards.
@@ -140,7 +140,7 @@ export function CartDrawer() {
 
           {saved.length > 0 && (
             <div className="mt-8">
-              <p className="luxe-eyebrow text-gold-600">Saved for Later</p>
+              <p className="navcci-eyebrow text-gold-600">Saved for Later</p>
               <ul className="mt-3 space-y-3">
                 {saved.map((item) => (
                   <li key={item.id} className="flex items-center gap-3 text-sm">

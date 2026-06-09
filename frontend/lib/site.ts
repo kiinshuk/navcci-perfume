@@ -1,17 +1,17 @@
 export const SITE = {
-  name: "Luxe Perfume",
+  name: "Navcci Perfume",
   tagline: "The Art of Fine Fragrance",
   description:
     "Discover hand-crafted niche perfumes from the world's most prestigious houses. Complimentary shipping across India on orders above ₹1,500.",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://luxeperfume.in",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://navcciperfume.in",
   ogImage: "/og.jpg",
-  email: "hello@luxeperfume.in",
+  email: "hello@navcciperfume.in",
   phone: "+91 99999 99999",
   whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "919999999999",
-  address: "Luxe Perfume Atelier, Mumbai 400001, India",
+  address: "Navcci Perfume Atelier, Mumbai 400001, India",
   social: {
-    instagram: "https://instagram.com/luxeperfume",
-    pinterest: "https://pinterest.com/luxeperfume",
+    instagram: "https://instagram.com/navcciperfume",
+    pinterest: "https://pinterest.com/navcciperfume",
     youtube: "https://youtube.com/@luxeperfume",
   },
 };

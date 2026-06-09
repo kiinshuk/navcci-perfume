@@ -10,7 +10,7 @@ export default function ReturnsPage() {
       <h2>Damaged or incorrect orders</h2>
       <p>
         If your order arrives damaged or incorrect, please contact us within 48 hours of
-        delivery at hello@luxeperfume.in with photographs. We'll arrange a free return
+        delivery at hello@navcciperfume.in with photographs. We'll arrange a free return
         and ship a replacement at no additional cost.
       </p>
       <h2>Change of mind</h2>

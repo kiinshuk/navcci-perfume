@@ -26,7 +26,7 @@ export default async function AdminHome() {
   } catch {}
 
   return (
-    <div className="luxe-container py-12">
+    <div className="navcci-container py-12">
       <h1 className="font-serif text-4xl">Admin Dashboard</h1>
       <p className="mt-1 text-sm text-muted-foreground">Welcome back. Here's the snapshot.</p>
 
@@ -58,7 +58,7 @@ export default async function AdminHome() {
 function Stat({ label, value }: { label: string; value: number | string }) {
   return (
     <div className="border border-border p-5">
-      <p className="luxe-eyebrow">{label}</p>
+      <p className="navcci-eyebrow">{label}</p>
       <p className="mt-2 font-serif text-3xl">{value}</p>
     </div>
   );

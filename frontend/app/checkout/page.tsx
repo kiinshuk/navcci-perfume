@@ -12,8 +12,8 @@ export default async function CheckoutPage() {
   if (!cart || cart.itemCount === 0) redirect("/cart");
 
   return (
-    <div className="luxe-container py-12">
-      <h1 className="luxe-heading text-4xl">Checkout</h1>
+    <div className="navcci-container py-12">
+      <h1 className="navcci-heading text-4xl">Checkout</h1>
       <p className="mt-2 text-muted-foreground">Complete your order — secure payments by Razorpay.</p>
       <div className="mt-10">
         <CheckoutForm initialCart={cart} />

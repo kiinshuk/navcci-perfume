@@ -7,7 +7,7 @@ export function WhatsAppButton() {
   const number = SITE.whatsapp.replace(/\D/g, "");
   return (
     <a
-      href={`https://wa.me/${number}?text=${encodeURIComponent("Hello Luxe Perfume, I'd like to know more about…")}`}
+      href={`https://wa.me/${number}?text=${encodeURIComponent("Hello Navcci Perfume, I'd like to know more about…")}`}
       target="_blank"
       rel="noreferrer"
       aria-label="Chat on WhatsApp"

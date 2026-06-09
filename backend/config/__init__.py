@@ -1,1 +1,1 @@
-"""Luxe Perfume Django project package."""
+"""Navcci Perfume Django project package."""

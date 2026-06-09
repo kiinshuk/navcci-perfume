@@ -3,7 +3,7 @@ import { cookies } from "next/headers";
 import { api, getAccessToken } from "./api";
 import type { Cart } from "@/types";
 
-const SESSION_COOKIE = "luxe.session";
+const SESSION_COOKIE = "navcci.session";
 
 export async function getCart(): Promise<Cart | null> {
   const token = getAccessToken();

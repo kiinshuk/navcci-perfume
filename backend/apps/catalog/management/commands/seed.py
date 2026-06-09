@@ -185,7 +185,7 @@ COUPONS = [
     {"code": "WELCOME10", "discount_type": "percentage", "discount_value": Decimal("10"),
      "min_order_value": Decimal("2000"), "max_discount": Decimal("1500"),
      "description": "10% off your first order (max ₹1,500)."},
-    {"code": "LUXE500", "discount_type": "fixed", "discount_value": Decimal("500"),
+    {"code": "NAVCCI500", "discount_type": "fixed", "discount_value": Decimal("500"),
      "min_order_value": Decimal("5000"), "description": "Flat ₹500 off on orders over ₹5,000."},
     {"code": "FREESHIP", "discount_type": "free_shipping", "discount_value": Decimal("0"),
      "min_order_value": Decimal("0"), "description": "Free shipping on any order."},
@@ -196,23 +196,23 @@ class Command(BaseCommand):
     help = "Seed the database with luxury perfume sample data."
 
     def handle(self, *args, **options):
-        self.stdout.write(self.style.MIGRATE_HEADING("Seeding Luxe Perfume database…"))
+        self.stdout.write(self.style.MIGRATE_HEADING("Seeding Navcci Perfume database…"))
 
         # Admin
-        if not User.objects.filter(email="admin@luxeperfume.in").exists():
+        if not User.objects.filter(email="admin@navcciperfume.in").exists():
             User.objects.create_superuser(
-                email="admin@luxeperfume.in",
+                email="admin@navcciperfume.in",
                 username="admin",
                 password="LuxeAdmin#2025",
                 first_name="Luxe",
                 last_name="Admin",
             )
-            self.stdout.write(self.style.SUCCESS("Created admin@luxeperfume.in / LuxeAdmin#2025"))
+            self.stdout.write(self.style.SUCCESS("Created admin@navcciperfume.in / LuxeAdmin#2025"))
 
         # Demo customer
-        if not User.objects.filter(email="demo@luxeperfume.in").exists():
+        if not User.objects.filter(email="demo@navcciperfume.in").exists():
             User.objects.create_user(
-                email="demo@luxeperfume.in",
+                email="demo@navcciperfume.in",
                 username="demo",
                 password="LuxeDemo#2025",
                 first_name="Aanya",
@@ -221,7 +221,7 @@ class Command(BaseCommand):
                 is_active=True,
                 email_verified_at=timezone.now(),
             )
-            self.stdout.write(self.style.SUCCESS("Created demo@luxeperfume.in / LuxeDemo#2025"))
+            self.stdout.write(self.style.SUCCESS("Created demo@navcciperfume.in / LuxeDemo#2025"))
 
         # Brands
         brand_objs = {}
@@ -275,7 +275,7 @@ class Command(BaseCommand):
                     "is_active": True,
                     "stock_quantity": random.randint(15, 60),
                     "brand": brand_objs[brand_name],
-                    "meta_description": f"Buy {p['name']} by {brand_name} at Luxe Perfume.",
+                    "meta_description": f"Buy {p['name']} by {brand_name} at Navcci Perfume.",
                 },
             )
             product.categories.add(category_objs["Eau de Parfum"])
@@ -301,7 +301,7 @@ class Command(BaseCommand):
             for body, rating in SAMPLE_REVIEWS:
                 Review.objects.get_or_create(
                     product=product,
-                    user=User.objects.filter(email="demo@luxeperfume.in").first(),
+                    user=User.objects.filter(email="demo@navcciperfume.in").first(),
                     defaults={
                         "rating": rating,
                         "title": "Beautiful fragrance",

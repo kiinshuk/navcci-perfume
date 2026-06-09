@@ -1,4 +1,4 @@
-"""ASGI config for the Luxe Perfume project."""
+"""ASGI config for the Navcci Perfume project."""
 import os
 
 from django.core.asgi import get_asgi_application

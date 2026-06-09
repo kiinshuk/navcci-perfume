@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 export function SiteFooter() {
   return (
     <footer className="border-t border-border bg-ink-50 dark:bg-ink-900">
-      <div className="luxe-container grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-12">
+      <div className="navcci-container grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-12">
         <div className="lg:col-span-4">
           <Link href="/" className="font-serif text-3xl">
             Luxe <span className="italic text-gold-500">Perfume</span>
@@ -29,7 +29,7 @@ export function SiteFooter() {
         <FooterColumn title="Legal" links={FOOTER_LINKS.legal} />
 
         <div className="md:col-span-2 lg:col-span-3">
-          <h4 className="luxe-eyebrow">The Atelier Letter</h4>
+          <h4 className="navcci-eyebrow">The Atelier Letter</h4>
           <p className="mt-3 text-sm text-muted-foreground">
             Subscribe for private launches, atelier stories and an opening 10% off.
           </p>
@@ -49,7 +49,7 @@ export function SiteFooter() {
       </div>
 
       <div className="border-t border-border">
-        <div className="luxe-container flex flex-col items-center justify-between gap-2 py-6 text-[11px] uppercase tracking-[0.2em] text-muted-foreground md:flex-row">
+        <div className="navcci-container flex flex-col items-center justify-between gap-2 py-6 text-[11px] uppercase tracking-[0.2em] text-muted-foreground md:flex-row">
           <p>© {new Date().getFullYear()} {SITE.name}. All rights reserved.</p>
           <p>Crafted in India · GSTIN 27ABCDE1234F1Z5</p>
         </div>
@@ -61,7 +61,7 @@ export function SiteFooter() {
 function FooterColumn({ title, links }: { title: string; links: { label: string; href: string }[] }) {
   return (
     <div>
-      <h4 className="luxe-eyebrow">{title}</h4>
+      <h4 className="navcci-eyebrow">{title}</h4>
       <ul className="mt-4 space-y-2 text-sm">
         {links.map((link) => (
           <li key={link.href}>

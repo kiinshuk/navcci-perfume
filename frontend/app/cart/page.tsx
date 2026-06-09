@@ -16,9 +16,9 @@ export default async function CartPage() {
 
   if (!cart || cart.items.length === 0) {
     return (
-      <div className="luxe-container py-24 text-center">
+      <div className="navcci-container py-24 text-center">
         <ShoppingBag className="mx-auto h-12 w-12 text-muted-foreground" />
-        <h1 className="mt-6 luxe-heading text-4xl">Your cart is empty</h1>
+        <h1 className="mt-6 navcci-heading text-4xl">Your cart is empty</h1>
         <p className="mt-3 text-muted-foreground">Begin your fragrance journey.</p>
         <Button asChild size="lg" className="mt-8">
           <Link href="/shop">Explore the Collection <ArrowRight className="h-4 w-4" /></Link>
@@ -28,8 +28,8 @@ export default async function CartPage() {
   }
 
   return (
-    <div className="luxe-container py-12">
-      <h1 className="luxe-heading text-4xl">Your Cart</h1>
+    <div className="navcci-container py-12">
+      <h1 className="navcci-heading text-4xl">Your Cart</h1>
 
       <div className="mt-10 grid gap-10 lg:grid-cols-[1fr_400px]">
         <ul className="divide-y divide-border border-y border-border">

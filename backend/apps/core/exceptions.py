@@ -8,10 +8,10 @@ from rest_framework.exceptions import APIException
 from rest_framework.response import Response
 from rest_framework.views import exception_handler
 
-logger = logging.getLogger("luxe.errors")
+logger = logging.getLogger("navcci.errors")
 
 
-def luxe_exception_handler(exc, context):
+def navcci_exception_handler(exc, context):
     """Wrap every error into {success, error: {code, message, details, request_id}}."""
     response = exception_handler(exc, context)
 

@@ -6,16 +6,16 @@ import { ContactForm } from "@/components/contact/contact-form";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Get in touch with the Luxe Perfume atelier.",
+  description: "Get in touch with the Navcci Perfume atelier.",
   alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {
   return (
-    <div className="luxe-container grid gap-12 py-12 lg:grid-cols-2">
+    <div className="navcci-container grid gap-12 py-12 lg:grid-cols-2">
       <div>
-        <p className="luxe-eyebrow text-gold-600">The Atelier</p>
-        <h1 className="mt-2 luxe-heading text-4xl">We'd love to hear from you.</h1>
+        <p className="navcci-eyebrow text-gold-600">The Atelier</p>
+        <h1 className="mt-2 navcci-heading text-4xl">We'd love to hear from you.</h1>
         <p className="mt-3 text-muted-foreground">
           Questions, bespoke consultations or press — our team replies within one
           business day.
@@ -49,7 +49,7 @@ export default function ContactPage() {
 
         <div className="mt-10 aspect-[4/3] w-full overflow-hidden">
           <iframe
-            title="Luxe Perfume Atelier Location"
+            title="Navcci Perfume Atelier Location"
             src="https://maps.google.com/maps?q=Mumbai%20400001&t=&z=13&ie=UTF8&iwloc=&output=embed"
             width="100%"
             height="100%"

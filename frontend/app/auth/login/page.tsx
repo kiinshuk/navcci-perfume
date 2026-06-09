@@ -42,9 +42,9 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="luxe-container max-w-md py-20">
-      <p className="luxe-eyebrow text-gold-600">Welcome back</p>
-      <h1 className="mt-2 luxe-heading text-4xl">Sign in</h1>
+    <div className="navcci-container max-w-md py-20">
+      <p className="navcci-eyebrow text-gold-600">Welcome back</p>
+      <h1 className="mt-2 navcci-heading text-4xl">Sign in</h1>
       <form onSubmit={form.handleSubmit(onSubmit)} className="mt-8 space-y-5">
         <div>
           <Label htmlFor="identifier" className="mb-2 block normal-case tracking-normal text-xs">Email or username</Label>

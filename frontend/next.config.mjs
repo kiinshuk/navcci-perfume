@@ -10,9 +10,9 @@ const nextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
     remotePatterns: [
-      { protocol: "https", hostname: "cdn.luxeperfume.in" },
-      { protocol: "https", hostname: "luxeperfume.in" },
-      { protocol: "https", hostname: "api.luxeperfume.in" },
+      { protocol: "https", hostname: "cdn.navcciperfume.in" },
+      { protocol: "https", hostname: "navcciperfume.in" },
+      { protocol: "https", hostname: "api.navcciperfume.in" },
       { protocol: "https", hostname: "images.unsplash.com" },
       { protocol: "https", hostname: "**.r2.cloudflarestorage.com" },
     ],

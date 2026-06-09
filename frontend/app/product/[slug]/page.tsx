@@ -68,7 +68,7 @@ export default async function ProductPage({ params }: PageProps) {
   };
 
   return (
-    <div className="luxe-container py-12">
+    <div className="navcci-container py-12">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -82,7 +82,7 @@ export default async function ProductPage({ params }: PageProps) {
 
       {product.related && product.related.length > 0 && (
         <section className="mt-20">
-          <h2 className="luxe-heading text-3xl">You May Also Love</h2>
+          <h2 className="navcci-heading text-3xl">You May Also Love</h2>
           <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-8">
             {product.related.map((p) => (
               <ProductCard key={p.id} product={p} />

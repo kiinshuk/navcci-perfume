@@ -4,8 +4,8 @@ import { isClient } from "./utils";
 const API_BASE_URL =
   process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000/api";
 
-const TOKEN_KEY = "luxe.access";
-const REFRESH_KEY = "luxe.refresh";
+const TOKEN_KEY = "navcci.access";
+const REFRESH_KEY = "navcci.refresh";
 
 export function getAccessToken(): string | null {
   if (!isClient()) return null;

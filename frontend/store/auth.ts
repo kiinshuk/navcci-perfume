@@ -82,7 +82,7 @@ export const useAuthStore = create<AuthState>()(
       setUser: (user) => set({ user }),
     }),
     {
-      name: "luxe.auth",
+      name: "navcci.auth",
       partialize: (state) => ({ user: state.user, access: state.access, refresh: state.refresh }),
     }
   )

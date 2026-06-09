@@ -14,7 +14,7 @@ export function ProductGallery({ images, name }: { images: ProductImage[]; name:
   if (!safe.length) {
     return (
       <div className="aspect-[3/4] w-full bg-muted">
-        <div className="flex h-full items-center justify-center luxe-eyebrow">Luxe Perfume</div>
+        <div className="flex h-full items-center justify-center navcci-eyebrow">Navcci Perfume</div>
       </div>
     );
   }

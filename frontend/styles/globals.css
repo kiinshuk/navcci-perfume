@@ -42,29 +42,29 @@
 }
 
 @layer components {
-  .luxe-container {
+  .navcci-container {
     @apply mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8;
   }
-  .luxe-heading {
+  .navcci-heading {
     @apply font-serif text-4xl leading-[1.1] tracking-tight md:text-5xl lg:text-6xl;
   }
-  .luxe-eyebrow {
+  .navcci-eyebrow {
     @apply text-[11px] font-medium uppercase tracking-[0.32em] text-muted-foreground;
   }
-  .luxe-link {
+  .navcci-link {
     @apply relative inline-flex items-center text-sm uppercase tracking-[0.2em] text-foreground/80 transition-colors hover:text-foreground;
   }
-  .luxe-link::after {
+  .navcci-link::after {
     content: "";
     @apply absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-current transition-transform duration-300;
   }
-  .luxe-link:hover::after {
+  .navcci-link:hover::after {
     @apply scale-x-100;
   }
-  .luxe-divider {
+  .navcci-divider {
     @apply h-px w-full bg-border;
   }
-  .luxe-shimmer {
+  .navcci-shimmer {
     background-image: linear-gradient(
       110deg,
       transparent 35%,

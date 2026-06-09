@@ -12,12 +12,12 @@ import { Marquee } from "@/components/home/marquee";
 export const revalidate = 60;
 
 export const metadata: Metadata = {
-  title: "Luxe Perfume — The Art of Fine Fragrance",
+  title: "Navcci Perfume — The Art of Fine Fragrance",
   description:
     "Discover hand-crafted niche perfumes from the world's most prestigious houses. Complimentary shipping across India on orders above ₹1,500.",
   alternates: { canonical: "/" },
   openGraph: {
-    title: "Luxe Perfume — The Art of Fine Fragrance",
+    title: "Navcci Perfume — The Art of Fine Fragrance",
     description: "Hand-crafted niche perfumes from the world's most prestigious houses.",
   },
 };

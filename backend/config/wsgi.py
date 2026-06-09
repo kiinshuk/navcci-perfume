@@ -1,4 +1,4 @@
-"""WSGI config for the Luxe Perfume project."""
+"""WSGI config for the Navcci Perfume project."""
 import os
 
 from django.core.wsgi import get_wsgi_application

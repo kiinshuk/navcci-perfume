@@ -34,7 +34,7 @@ from apps.accounts.serializers import (
 from apps.core.throttling import AuthRateThrottle
 
 User = get_user_model()
-logger = logging.getLogger("luxe.accounts")
+logger = logging.getLogger("navcci.accounts")
 
 
 # ---------------------------------------------------------------------------

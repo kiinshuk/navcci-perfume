@@ -54,8 +54,8 @@ export function ProductBuyBox({ product }: { product: Product }) {
   return (
     <div className="space-y-7">
       <div>
-        <p className="luxe-eyebrow">{product.brand?.name}</p>
-        <h1 className="mt-2 luxe-heading text-3xl md:text-4xl">{product.name}</h1>
+        <p className="navcci-eyebrow">{product.brand?.name}</p>
+        <h1 className="mt-2 navcci-heading text-3xl md:text-4xl">{product.name}</h1>
         <p className="mt-2 text-sm text-muted-foreground">{product.shortDescription}</p>
 
         <div className="mt-4 flex items-center gap-3">
@@ -97,7 +97,7 @@ export function ProductBuyBox({ product }: { product: Product }) {
       <div className="flex flex-col gap-4">
         {product.inStock ? (
           <div className="flex items-center gap-4">
-            <span className="luxe-eyebrow">Quantity</span>
+            <span className="navcci-eyebrow">Quantity</span>
             <div className="flex items-center border border-border">
               <button
                 onClick={() => setQuantity(Math.max(1, quantity - 1))}
