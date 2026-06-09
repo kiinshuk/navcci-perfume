@@ -1,0 +1,191 @@
+{
+  "info": {
+    "name": "Luxe Perfume API",
+    "_postman_id": "luxe-perfume-collection",
+    "description": "Complete API collection for the Luxe Perfume platform.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:8000/api" },
+    { "key": "accessToken", "value": "" },
+    { "key": "refreshToken", "value": "" }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [{ "key": "token", "value": "{{accessToken}}" }]
+  },
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Register",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": { "raw": "{{baseUrl}}/auth/register/", "host": ["{{baseUrl}}"], "path": ["auth","register",""] },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"demo@luxeperfume.in\",\n  \"username\": \"demo\",\n  \"firstName\": \"Aanya\",\n  \"lastName\": \"Mehra\",\n  \"phone\": \"+919999999999\",\n  \"password\": \"LuxeDemo#2025\",\n  \"passwordConfirm\": \"LuxeDemo#2025\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Login",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "const data = pm.response.json();",
+                  "if (data.access) { pm.collectionVariables.set('accessToken', data.access); }",
+                  "if (data.refresh) { pm.collectionVariables.set('refreshToken', data.refresh); }"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": { "raw": "{{baseUrl}}/auth/login/", "host": ["{{baseUrl}}"], "path": ["auth","login",""] },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\": \"demo@luxeperfume.in\",\n  \"password\": \"LuxeDemo#2025\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Refresh Token",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": { "raw": "{{baseUrl}}/auth/token/refresh/", "host": ["{{baseUrl}}"], "path": ["auth","token","refresh",""] },
+            "body": { "mode": "raw", "raw": "{\n  \"refresh\": \"{{refreshToken}}\"\n}" }
+          }
+        },
+        {
+          "name": "Profile",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/auth/profile/", "host": ["{{baseUrl}}"], "path": ["auth","profile",""] }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Catalog",
+      "item": [
+        {
+          "name": "List Products",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/products/?ordering=-created_at&page=1",
+              "host": ["{{baseUrl}}"],
+              "path": ["products",""],
+              "query": [
+                { "key": "ordering", "value": "-created_at" },
+                { "key": "page", "value": "1" }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Product Detail",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/products/noir-velours/", "host": ["{{baseUrl}}"], "path": ["products","noir-velours",""] }
+          }
+        },
+        {
+          "name": "Bestsellers",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/products/bestsellers/", "host": ["{{baseUrl}}"], "path": ["products","bestsellers",""] }
+          }
+        },
+        {
+          "name": "Search",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/search/?q=oud", "host": ["{{baseUrl}}"], "path": ["search",""], "query": [{ "key": "q", "value": "oud" }] }
+          }
+        },
+        {
+          "name": "Brands",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/brands/", "host": ["{{baseUrl}}"], "path": ["brands",""] }
+          }
+        },
+        {
+          "name": "Categories",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/categories/", "host": ["{{baseUrl}}"], "path": ["categories",""] }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Cart & Checkout",
+      "item": [
+        {
+          "name": "Get Cart",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/cart/", "host": ["{{baseUrl}}"], "path": ["cart",""] }
+          }
+        },
+        {
+          "name": "Add to Cart",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": { "raw": "{{baseUrl}}/cart/items/", "host": ["{{baseUrl}}"], "path": ["cart","items",""] },
+            "body": { "mode": "raw", "raw": "{\n  \"product_id\": \"<UUID>\",\n  \"quantity\": 1\n}" }
+          }
+        },
+        {
+          "name": "Apply Coupon",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": { "raw": "{{baseUrl}}/cart/coupon/", "host": ["{{baseUrl}}"], "path": ["cart","coupon",""] },
+            "body": { "mode": "raw", "raw": "{\n  \"code\": \"WELCOME10\"\n}" }
+          }
+        },
+        {
+          "name": "Checkout",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": { "raw": "{{baseUrl}}/checkout/", "host": ["{{baseUrl}}"], "path": ["checkout",""] },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"shippingFullName\": \"Aanya Mehra\",\n  \"shippingPhone\": \"+919999999999\",\n  \"shippingLine1\": \"12 Marine Drive\",\n  \"shippingCity\": \"Mumbai\",\n  \"shippingState\": \"MH\",\n  \"shippingPostalCode\": \"400001\",\n  \"billingSameAsShipping\": true\n}"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Payments",
+      "item": [
+        {
+          "name": "Capture Payment",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": { "raw": "{{baseUrl}}/payments/capture/", "host": ["{{baseUrl}}"], "path": ["payments","capture",""] },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"order_id\": \"LX-20250101-ABC123\",\n  \"payment_id\": \"pay_xxx\",\n  \"signature\": \"signature_xxx\"\n}"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 36 25% 97%;
+    --foreground: 30 12% 8%;
+    --muted: 36 12% 92%;
+    --muted-foreground: 30 8% 35%;
+    --border: 30 14% 88%;
+    --input: 30 14% 88%;
+    --ring: 33 60% 35%;
+    --radius: 0.25rem;
+  }
+
+  .dark {
+    --background: 30 8% 7%;
+    --foreground: 36 22% 95%;
+    --muted: 30 8% 12%;
+    --muted-foreground: 36 8% 70%;
+    --border: 30 8% 18%;
+    --input: 30 8% 18%;
+    --ring: 33 60% 55%;
+  }
+
+  * {
+    @apply border-border;
+  }
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+  ::selection {
+    background: hsl(var(--ring) / 0.25);
+  }
+}
+
+@layer components {
+  .luxe-container {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8;
+  }
+  .luxe-heading {
+    @apply font-serif text-4xl leading-[1.1] tracking-tight md:text-5xl lg:text-6xl;
+  }
+  .luxe-eyebrow {
+    @apply text-[11px] font-medium uppercase tracking-[0.32em] text-muted-foreground;
+  }
+  .luxe-link {
+    @apply relative inline-flex items-center text-sm uppercase tracking-[0.2em] text-foreground/80 transition-colors hover:text-foreground;
+  }
+  .luxe-link::after {
+    content: "";
+    @apply absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-current transition-transform duration-300;
+  }
+  .luxe-link:hover::after {
+    @apply scale-x-100;
+  }
+  .luxe-divider {
+    @apply h-px w-full bg-border;
+  }
+  .luxe-shimmer {
+    background-image: linear-gradient(
+      110deg,
+      transparent 35%,
+      hsl(var(--background) / 0.6) 50%,
+      transparent 65%
+    );
+    background-size: 200% 100%;
+    @apply animate-shimmer;
+  }
+}
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: hsl(var(--border)); border-radius: 8px; }
+::-webkit-scrollbar-thumb:hover { background: hsl(var(--muted-foreground) / 0.5); }
