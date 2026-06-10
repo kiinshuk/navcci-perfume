@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Policy from "../policy-layout";
 
 export const metadata: Metadata = { title: "Return & Refund Policy", alternates: { canonical: "/returns" } };
 
