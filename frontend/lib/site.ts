@@ -12,7 +12,7 @@ export const SITE = {
   social: {
     instagram: "https://instagram.com/navcciperfume",
     pinterest: "https://pinterest.com/navcciperfume",
-    youtube: "https://youtube.com/@luxeperfume",
+    youtube: "https://youtube.com/@navcciperfume",
   },
 };
 

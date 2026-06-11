@@ -48,7 +48,7 @@ export function SiteHeader() {
 
         <Link href="/" className="flex items-center gap-2" aria-label={SITE.name}>
           <span className="font-serif text-2xl font-medium tracking-wide md:text-[28px]">
-            Luxe
+            Navcci
           </span>
           <span className="hidden font-serif text-2xl italic text-gold-500 md:inline">Perfume</span>
         </Link>

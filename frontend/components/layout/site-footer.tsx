@@ -12,7 +12,7 @@ export function SiteFooter() {
       <div className="navcci-container grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-12">
         <div className="lg:col-span-4">
           <Link href="/" className="font-serif text-3xl">
-            Luxe <span className="italic text-gold-500">Perfume</span>
+            Navcci <span className="italic text-gold-500">Perfume</span>
           </Link>
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
             {SITE.description}

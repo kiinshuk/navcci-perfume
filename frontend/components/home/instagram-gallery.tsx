@@ -17,7 +17,7 @@ export function InstagramGallery() {
     <section className="navcci-container py-20">
       <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
         <div>
-          <p className="navcci-eyebrow text-gold-600">@luxeperfume</p>
+          <p className="navcci-eyebrow text-gold-600">@navcciperfume</p>
           <h2 className="mt-2 navcci-heading text-3xl md:text-4xl">The Atelier in the Wild</h2>
         </div>
         <Button asChild variant="outline" size="sm">
