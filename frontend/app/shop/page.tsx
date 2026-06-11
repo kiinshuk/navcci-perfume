@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 
 import { productsApi } from "@/lib/services";
+import type { Product } from "@/types";
 import { ProductCard } from "@/components/product/product-card";
 import { ShopFilters } from "@/components/product/shop-filters";
 import { ShopSort } from "@/components/product/shop-sort";
@@ -86,7 +87,7 @@ export default async function ShopPage({ searchParams }: PageProps) {
             </div>
           ) : (
             <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-8">
-              {data.results.map((product, idx) => (
+              {data.results.map((product: Product, idx) => (
                 <ProductCard key={product.id} product={product} priority={idx < 3} />
               ))}
             </div>
