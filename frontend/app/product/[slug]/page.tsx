@@ -10,12 +10,13 @@ import { SITE } from "@/lib/site";
 import { formatCurrency } from "@/lib/utils";
 
 interface PageProps {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { slug } = await params;
   try {
-    const product = await productsApi.detail(params.slug);
+    const product = await productsApi.detail(slug);
     return {
       title: product.metaTitle || `${product.name} — ${product.brand.name}`,
       description: product.metaDescription || product.shortDescription,
@@ -34,14 +35,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 export default async function ProductPage({ params }: PageProps) {
+  const { slug } = await params;
   let product;
   try {
-    product = await productsApi.detail(params.slug);
+    product = await productsApi.detail(slug);
   } catch {
     notFound();
   }
 
-  const reviews = await reviewsApi.forProduct(params.slug).catch(() => []);
+  const reviews = await reviewsApi.forProduct(slug).catch(() => []);
 
   const jsonLd = {
     "@context": "https://schema.org/",
