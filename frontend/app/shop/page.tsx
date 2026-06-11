@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 };
 
 interface PageProps {
-  searchParams: Record<string, string | string[] | undefined>;
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
 }
 
 function toQuery(value: string | string[] | undefined): string | undefined {
@@ -23,17 +23,18 @@ function toQuery(value: string | string[] | undefined): string | undefined {
 }
 
 export default async function ShopPage({ searchParams }: PageProps) {
+  const sp = await searchParams;
   const params: Record<string, string> = {};
-  const page = toQuery(searchParams.page) ?? "1";
-  const ordering = toQuery(searchParams.sort) ?? "";
-  const minPrice = toQuery(searchParams.min_price);
-  const maxPrice = toQuery(searchParams.max_price);
-  const gender = toQuery(searchParams.gender);
-  const fragranceFamily = toQuery(searchParams.fragrance_family);
-  const brand = toQuery(searchParams.brand);
-  const minRating = toQuery(searchParams.min_rating);
-  const filter = toQuery(searchParams.filter);
-  const search = toQuery(searchParams.q);
+  const page = toQuery(sp.page) ?? "1";
+  const ordering = toQuery(sp.sort) ?? "";
+  const minPrice = toQuery(sp.min_price);
+  const maxPrice = toQuery(sp.max_price);
+  const gender = toQuery(sp.gender);
+  const fragranceFamily = toQuery(sp.fragrance_family);
+  const brand = toQuery(sp.brand);
+  const minRating = toQuery(sp.min_rating);
+  const filter = toQuery(sp.filter);
+  const search = toQuery(sp.q);
 
   if (page) params.page = page;
   if (ordering) params.ordering = ordering;
