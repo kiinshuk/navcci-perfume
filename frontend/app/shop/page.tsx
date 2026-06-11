@@ -50,7 +50,7 @@ export default async function ShopPage({ searchParams }: PageProps) {
   if (filter === "bestseller") params.is_bestseller = "true";
   if (filter === "featured") params.is_featured = "true";
 
-  const data = await productsApi.list(params).catch(() => ({ results: [], count: 0, totalPages: 1, page: 1 } as any));
+  const data = await productsApi.list(params).catch(() => ({ results: [] as Product[], count: 0, totalPages: 1, page: 1 }));
 
   return (
     <div className="navcci-container py-12">
