@@ -200,6 +200,11 @@ export interface Order {
   timeline: OrderTimeline[];
 }
 
+export interface Wishlist {
+  id: UUID;
+  products: Product[];
+}
+
 export interface PaginatedResponse<T> {
   count: number;
   page: number;
