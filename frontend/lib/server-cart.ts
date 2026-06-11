@@ -16,7 +16,7 @@ export async function getCart(): Promise<Cart | null> {
     }
   }
   // Anonymous: try to fetch by session key from cookie
-  const session = cookies().get(SESSION_COOKIE)?.value;
+  const session = (await cookies()).get(SESSION_COOKIE)?.value;
   if (!session) return null;
   try {
     const { data } = await api.get<Cart>("/cart/", { headers: { "X-Session-Key": session } });
